@@ -1,0 +1,14 @@
+/* solution.css */
+/* Correct specificity issue by making the more desired selector more specific */
+.container .item {
+  color: blue; /* Now this will be applied correctly */
+}
+
+/* The old selector is less specific and needs to be corrected or removed if it isn't needed */
+.item {
+  color: red; /* This will not override the first selector */
+}
+/* If you really wanted to override something by making a very specific selector */
+#specific-id .item {
+  color: green; /* this will be applied to the element if it has a specific ID and matches the class .item */
+}
